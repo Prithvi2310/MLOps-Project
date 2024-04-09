@@ -16,7 +16,7 @@ def error_message_details(error, error_detail:sys):
 # defining a custom exception class which inherits from the base exception class
 class CustomException(Exception):
     def __init__(self, error_message, error_detail:sys):
-        super.__init__(error_message)  # calling the parent class constructor
+        super().__init__(error_message)  # calling the parent class constructor
         self.error_message = error_message_details(error_message,error_detail)
         
     def __str__(self):
